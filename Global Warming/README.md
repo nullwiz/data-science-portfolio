@@ -20,7 +20,7 @@ plt.xlabel('year')
 We can see an upward trend. We will now check the temperatures for the cities.
 For that, we need to convert to a city-year table and calculate mean year temperature.
 
-~~~~
+~~~~python
 bycities = pd.read_csv('../input/GlobalLandTemperaturesByCity.csv', parse_dates=['dt'])
 # there are some cities with the same name but in different countries 
 bycities[['City', 'Country']].drop_duplicates()
@@ -31,7 +31,7 @@ bycities.head()
 
 We need to normalize cities temperatures. For that we shift them by the means for the first 5 years. 
 
-~~~~
+~~~~python
 first_years_mean = city_means.iloc[:, :5].mean(axis=1) # mean temperature for the first 5 years
 city_means_shifted = city_means.subtract(first_years_mean, axis=0)
 
