@@ -66,3 +66,27 @@ axes[2].set_title("Year's max temperature increase for random cities")
 We want to create an animation showing markers which will have the following characteristics:
 Color: indicates if the year temperature is near to a recorded one for the city  (dark blue for coldest temperatures, dark red for highest temperatures).
 Size: Represents absolute difference between city median temperature and current year temperature.
+~~~python
+def get_temp_markers(city_names, year):
+    points = np.zeros(len(city_names), dtype=[('lon', float, 1),
+                                      ('lat', float, 1),
+                                      ('size',     float, 1),
+                                      ('color',    float, 1)])
+    cmap = plt.get_cmap('coolwarm')
+    
+    for i, city in enumerate(city_names):
+        city_temps = city_means.loc[city]
+        _MIN, _MAX, _MEDIAN = city_temps.min(), city_temps.max(), city_temps.median()
+        temp = city_temps.loc[year]
+        
+        coords = cities_info.loc[city][['Latitude', 'Longitude']].values
+        lat = float(coords[0][:-1]) * (-1 if coords[0][-1] == 'S' else 1)
+        lon = float(coords[1][:-1]) * (-1 if coords[1][-1] == 'W' else 1)
+        
+        points['lat'][i] = lat
+        points['lon'][i] = lon
+        points['size'][i] = 100 * abs(temp - _MEDIAN)
+        points['color'][i] = (temp - _MIN) / (_MAX - _MIN)
+            
+    return points   
+    ~~~~
