@@ -6,13 +6,13 @@ in temperature over the years for random cities all around the world.
 
 Lets start off by analyzing the average raise of temperature over the years:
 
-~~~~python
+```python
 year_temp = globaltemp.groupby(globaltemp.dt.dt.year).mean()
 pd.stats.moments.ewma(year_temp.LandAverageTemperature, 5).plot()
 year_temp.LandAverageTemperature.plot(linewidth=1)
 plt.title('Average temperature by year')
 plt.xlabel('year')
-~~~~
+```
 
 [image]
 
