@@ -14,7 +14,8 @@ plt.title('Average temperature by year')
 plt.xlabel('year')
 ```
 
-[image]
+
+![Image of Average Temperature Raise](https://raw.githubusercontent.com/nullwiz/data-science-portfolio/master/Global%20Warming/avg_temp_raise.png)
 
 
 We can see an upward trend. We will now check the temperatures for the cities.
@@ -58,7 +59,7 @@ axes[1].set_title("Year's min temperature increase for random cities")
 axes[2].set_title("Year's max temperature increase for random cities")
 ~~~~
 
-[image_tempbycity]
+![Image of Average Cities Temperature Raise](https://raw.githubusercontent.com/nullwiz/data-science-portfolio/master/Global%20Warming/avg_temp_raise_random_cities.png)
 
 
 
@@ -89,4 +90,10 @@ def get_temp_markers(city_names, year):
         points['color'][i] = (temp - _MIN) / (_MAX - _MIN)
             
     return points   
-    ~~~~
+  ~~~~
+    
+ After returning the points , we build the FuncAnimator with the update function. 
+ There is a bug that requires FuncAnimator to be defined within a global variable, keep this in mind if you are forking this project.
+ 
+ Finally, we get: 
+![Image of Average Cities Temperature Raise](https://raw.githubusercontent.com/nullwiz/data-science-portfolio/master/Global%20Warming/finalGif.gif)
