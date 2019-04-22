@@ -59,7 +59,7 @@ axes[1].set_title("Year's min temperature increase for random cities")
 axes[2].set_title("Year's max temperature increase for random cities")
 ~~~~
 
-![Image of Average Cities Temperature Raise](https://raw.githubusercontent.com/nullwiz/data-science-portfolio/master/Global%20Warming/avg_temp_raise_random_cities.png)
+![Average Cities Temperature Raise](https://raw.githubusercontent.com/nullwiz/data-science-portfolio/master/Global%20Warming/avg_temp_raise_random_cities.png)
 
 
 
