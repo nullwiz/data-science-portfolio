@@ -59,7 +59,7 @@ axes[1].set_title("Year's min temperature increase for random cities")
 axes[2].set_title("Year's max temperature increase for random cities")
 ~~~~
 
-![Image of Average Cities Temperature Raise](https://raw.githubusercontent.com/nullwiz/data-science-portfolio/master/Global%20Warming/avg_temp_raise_random_cities.png)
+![Average Cities Temperature Raise](https://raw.githubusercontent.com/nullwiz/data-science-portfolio/master/Global%20Warming/avg_temp_raise_random_cities.png)
 
 
 
@@ -96,4 +96,20 @@ def get_temp_markers(city_names, year):
  There is a bug that requires FuncAnimator to be defined within a global variable, keep this in mind if you are forking this project.
  
  Finally, we get: 
+ 
+ 
+ 
+ 
+ 
+ 
 ![Image of Average Cities Temperature Raise](https://raw.githubusercontent.com/nullwiz/data-science-portfolio/master/Global%20Warming/finalGif.gif)
+
+
+
+''Final conclusion
+
+The whole idea here is trying to show that temperatures are rising. 
+I am yet to find a dataset of temperatures that are from regions and not specifically images, but this has already been done,
+for example, there are proofs of global warming in the north and south poles too.
+It is clear that climate change is very real and is up to us to do something about it.
+
